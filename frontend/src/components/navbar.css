@@ -1,0 +1,52 @@
+.navbar{
+    inline-size: 100%;
+    block-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d2e0e7fe;
+    /* color: black; */
+}
+.middle{
+  inline-size: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    gap: 20px;
+}
+.left{
+  inline-size: 33%;
+    display: flex;
+    align-items: center;
+    /* justify-content: left; */
+    padding-left: 20px;
+    gap: 20px;
+}
+.right{
+    inline-size: 33%;
+    padding-right: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+.run-btn {
+  padding: 8px 16px;
+  background-color: #3068e0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+}
+
+.run-btn:hover {
+  background-color: #1d4ed8;
+}
+
+button:active {
+  transform: scale(0.97);
+}
