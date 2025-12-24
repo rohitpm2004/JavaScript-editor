@@ -18,7 +18,7 @@ const CodeEditor = ({ code, setCode, theme, runCode, toggleTheme }) => {
           value={code}
           onChange={(v) => setCode(v)}
           options={{
-            fontSize: 16,
+            fontSize: 14,
             minimap: { enabled: false },
             automaticLayout: true
           }}

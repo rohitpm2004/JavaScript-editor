@@ -6,7 +6,7 @@ const Navbar = ( {theme} ) => {
   return (
     <div style={{backgroundColor:theme==="dark"?"#101828":"#3949AB" , color:theme==="dark"?"white":"white"}} className='navbar'>
       <div className="left">
-        <img src="\src\images\barabari_logo-CW6k3Oea.png"   alt="" />
+        <img src="\src\assets\logo.png"   alt="" />
         <div className="wrap-heading">
         <h2 className='nav-h2'>the barabari Collective</h2>
         <p className='nav-p'  >Javascript online Compiler</p>
