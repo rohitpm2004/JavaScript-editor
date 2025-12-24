@@ -1,0 +1,60 @@
+.footer {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+/* Theme colors */
+.footer.dark {
+  background-color: #101828;
+  color: white;
+}
+
+.footer.light {
+  background-color: #3949ab;
+  color: white;
+}
+
+/* Desktop */
+.footer h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .footer {
+    padding: 12px;
+    min-height: 90px;
+  }
+
+  .footer h1 {
+    font-size: 14px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  .footer h1 {
+    font-size: 13px;
+  }
+
+  .footer p {
+    font-size: 11px;
+  }
+}

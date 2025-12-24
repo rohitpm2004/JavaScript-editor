@@ -1,15 +1,44 @@
-*{
-  margin: 0%;
-  padding: 0%;
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-body{
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: aqua;
+
+body {
+  font-family: Segoe UI, sans-serif;
+  width: 100%;
 }
-#root{
-  inline-size: 100%;
-  block-size: 100vh;
-  background-color: beige;
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar + Content + Footer layout */
+.container {
+  display: flex;
+  flex: 1;               /* ✅ takes remaining space */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Editor + Console wrapper */
+.main-layout {
+  display: flex;
+  flex: 2;                
+  min-height: 0;         /* ✅ VERY IMPORTANT */
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }

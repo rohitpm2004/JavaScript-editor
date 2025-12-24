@@ -1,0 +1,125 @@
+/* style={{display:"flex",justifyContent:"space-between",borderBottom:isDark ? "2px solid white" : "2px solid black",marginBottom:"10px"}
+/* style={{cursor: "pointer",blockSize:"30px",inlineSize:"70px",backgroundColor:"#E04729"}} */
+ 
+/* .clearbtn{
+    cursor: pointer;
+    block-size: 30px;
+    inline-size: 70px;
+    block-size: 30px;
+    background-color:#E04729 ;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.console-section {
+  display: flex;
+  flex-direction: column;
+  scrollbar-width:none;
+} */
+
+/* Header layout */
+/* .wrap-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+/* Clear button */
+/* .clearbtn {
+  padding: 6px 10px;
+  cursor: pointer;
+} */
+/* style={{ color: isDark ? "#fff" : "#000",paddingTop:"10px" ,fontSize:"20px" }} */
+/* .console-h3{
+    padding-top: 10px;
+    font-size: 20px;
+} */
+/* 📱 Mobile adjustments */
+/* @media (max-width: 768px) {
+  .console-section {
+    font-size: 14px;
+    inline-size: 400px;
+    block-size: 500px;
+  }
+
+  .wrap-btns {
+    gap: 10px;
+  }
+
+  .clearbtn {
+    width: 40px;
+    height: 15px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .console-h3{
+    padding-top: 10px;
+    font-size: 10px;
+}
+}  */
+
+
+.console-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  font-family: monospace;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+/* Header layout */
+.wrap-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Output title */
+.console-h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Clear button */
+.clearbtn {
+  padding: 6px 12px;
+  background-color: #E04729;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Button interaction */
+.clearbtn:active {
+  transform: scale(0.96);
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+  .console-section {
+    width: 100%;
+    min-height: 220px;
+    font-size: 14px;
+    
+  }
+
+  .wrap-btns {
+    flex-direction: row;
+  }
+
+  .console-h3 {
+    font-size: 16px;
+  }
+
+  .clearbtn {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+}

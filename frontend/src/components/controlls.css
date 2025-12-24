@@ -1,0 +1,223 @@
+/* .right-div{
+     
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    inline-size: 50%;
+} */
+/* .btn{
+    cursor: pointer;
+    display: flex;
+    inline-size: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color:#5563A9 ;
+    inline-size: 80px;
+    block-size: 35px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+
+}
+.btn:hover{
+    background-color: #ffcc33;
+    color: black;
+}
+.btn:active {
+  transform: scale(0.97);
+} */
+
+
+/* Main controls wrapper */
+/* .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+} */
+
+/* Left section (file name) */
+/* .left h3 {
+  margin: 0;
+  font-size: 18px;
+} */
+
+/* Right buttons container */
+/* .right-div {
+  display: flex;
+  inline-size: 50%;
+  gap: 10px;
+  justify-content: right;
+} */
+
+/* Buttons
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+} */
+
+/* Hover effect
+.btn:hover {
+  opacity: 0.9;
+} */
+
+/* 📱 Mobile view */
+/* @media (max-width: 768px) {
+  .controls {
+    /* flex-direction: column; */
+    /* align-items: stretch;
+    gap: 5px;
+    inline-size: 1000px;
+  }  */
+/* 
+  .right-div {
+    flex-direction: column;
+  } */
+/* 
+  .btn {
+    width: 40px;
+    height: 15px;
+    justify-content: center;
+    font-size: 6px;
+    padding: 12px;
+    display: flex;
+  } */
+
+  /* .left h3 {
+    text-align: left;
+    font-size: 8px;
+  }
+} */
+
+
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5563A9;
+  width: 80px;
+  height: 35px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.btn:hover {
+  background-color: #ffcc33;
+  color: black;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ---------- CONTROLS BAR ---------- */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+/* File name */
+.left h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Right buttons */
+.right-div {
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------- CONSOLE ---------- */
+.console-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  overflow-y: auto;
+  font-family: monospace;
+}
+
+/* Header */
+.wrap-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.console-h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Clear button */
+.clearbtn {
+  padding: 6px 12px;
+  background-color: #E04729;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ---------- 📱 MOBILE VIEW ---------- */
+@media (max-width: 768px) {
+
+  /* Stack controls */
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .right-div {
+    justify-content: space-between;
+  }
+
+   .btn {
+      
+     inline-size: auto;
+     block-size: auto;
+     padding: 5px 10px;
+    font-size: 8px;
+  } 
+
+  .left h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Console */
+  .console-section {
+    width: 100%;
+    min-height: 220px;
+    font-size: 14px;
+  }
+
+  .console-h3 {
+    font-size: 16px;
+  }
+
+  .clearbtn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}

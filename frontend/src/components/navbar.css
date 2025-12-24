@@ -1,30 +1,36 @@
-.navbar{
+/* .navbar{
     inline-size: 100%;
     block-size: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #d2e0e7fe;
-    /* color: black; */
-}
-.middle{
-  inline-size: 33%;
+    
+} */
+/* .middle{
+  inline-size: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 20px;
     gap: 20px;
-}
-.left{
-  inline-size: 33%;
+} */
+/* .left{
+  inline-size: 30%;
     display: flex;
     align-items: center;
-    /* justify-content: left; */
+    justify-content: left;
     padding-left: 20px;
     gap: 20px;
 }
+.wrap-heading{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .right{
-    inline-size: 33%;
+    inline-size: 30%;
     padding-right: 20px;
     display: flex;
     justify-content: right;
@@ -42,11 +48,109 @@
   display: flex;
   gap: 5px;
 }
-
 .run-btn:hover {
   background-color: #1d4ed8;
 }
 
 button:active {
   transform: scale(0.97);
+} */
+
+
+.navbar {
+  width: 100%;
+  min-height: 70px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* LEFT SECTION */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wrap-heading h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.wrap-heading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* RIGHT SECTION */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+/* style={{width:"60px", borderRadius:"50%"}} */
+img{
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+/* BUTTON */
+.run-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.nav-h2{
+  font-size: 30px;
+}
+.nav-p{
+  font-size: 15px;
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    text-align: center;
+     
+  }
+  img{
+  width:25px;
+  height: 25px;
+  border-radius: 50%;
+
+}
+.nav-h2{
+  font-size: 15px;
+}
+.nav-p{
+  font-size: 10px;
+}
+  .left {
+    justify-content: center;
+  }
+
+  .wrap-heading h2 {
+    font-size: 16px;
+  }
+
+  .wrap-heading p {
+    font-size: 12px;
+  }
+
+  .right {
+    font-size: 10px;
+    display: none;
+  }
+
+  .right h2 {
+    display: none; 
+  }
 }

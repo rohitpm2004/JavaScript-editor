@@ -4,19 +4,18 @@ import { FaSmile } from "react-icons/fa";
 // import logo from "\barabari_logo-CW6k3Oea.png"
 const Navbar = ( {theme} ) => {
   return (
-    <div style={{backgroundColor:theme==="dark"?"#02151fd1":"#d2e0e7fe" , color:theme==="dark"?"white":"black"}} className='navbar'>
+    <div style={{backgroundColor:theme==="dark"?"#101828":"#3949AB" , color:theme==="dark"?"white":"white"}} className='navbar'>
       <div className="left">
-        <img src="\src\images\barabari_logo-CW6k3Oea.png"  style={{width:"60px", borderRadius:"50%"}} alt="" />
-        <h2>the barabari Collective</h2>
+        <img src="\src\images\barabari_logo-CW6k3Oea.png"   alt="" />
+        <div className="wrap-heading">
+        <h2 className='nav-h2'>the barabari Collective</h2>
+        <p className='nav-p'  >Javascript online Compiler</p>
+        </div>
       </div>
-      <div className="middle">
-        
-        <h1 style={{fontSize:"40px"}}>Javascript online Compiler</h1>
-      </div>
+       
       <div className="right">
-         
          <h2>Enjoy Coding </h2>
-         <FaSmile style={{color:theme==="dark"?"white":"black"}} size={28} />
+         <FaSmile style={{color:"white"}} size={28} />
       </div>
     </div>
   ) 
