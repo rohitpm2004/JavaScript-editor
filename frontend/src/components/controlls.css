@@ -140,13 +140,18 @@
 
 /* Right buttons */
 .right-div {
+  inline-size: auto;
+  padding-top: 5px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
 /* ---------- CONSOLE ---------- */
 .console-section {
   display: flex;
+   
   flex-direction: column;
   height: 100%;
   padding: 10px;
