@@ -1,8 +1,23 @@
 import { FaShare,FaPlay,FaSun,FaMoon } from "react-icons/fa";
 import "./controlls.css"
 
-const Controls = ({ onRun, onClear, onToggleTheme, theme }) => {
+import { saveCode } from "../services/api";
 
+const Controls = ({ onRun, onToggleTheme, theme ,code,readOnly}) => {
+
+
+  const handleShare = async ()=> {
+    try {
+      const data = await saveCode(code);
+      console.log("Shareable URL:", data.url);
+
+      // copy the clipboard
+      await navigator.clipboard.writeText(data.url)
+    }
+    catch(err){
+      alert("Failed to share code")
+    }
+  };
   
   return (
 
@@ -12,7 +27,7 @@ const Controls = ({ onRun, onClear, onToggleTheme, theme }) => {
         </div>
      <div className="right-div">
          <button className="btn"  onClick={onRun}> <FaPlay size={15}/> Run</button>
-         <button className="btn"  onClick={onClear}> <FaShare size={15}/> share</button>
+         {!readOnly && (<button className="btn"  onClick={handleShare}> <FaShare size={15}/> share</button>)}
          <button className="btn"   onClick={onToggleTheme}>
         {theme === "dark" ? (
   <>

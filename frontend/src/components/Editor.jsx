@@ -9,6 +9,7 @@ const CodeEditor = ({ code, setCode, theme, runCode, toggleTheme }) => {
         onRun={runCode}
         onToggleTheme={toggleTheme}
         theme={theme}
+        code={code}
       />
 
       <div className="editor-container">
