@@ -1,7 +1,8 @@
 .console-section {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  flex: 1;
+  min-height: 0;          /* 🔥 important for flex */
   padding: 10px;
   font-family: monospace;
 }
@@ -39,7 +40,7 @@
 .console-output {
   flex: 1;                 /* 🔥 takes remaining height */
   overflow-y: auto;
-  white-space: pre;
+  white-space: pre-wrap;   /* better for mobile */
 
   /* Hide scrollbar (Firefox) */
   scrollbar-width: none;
@@ -51,11 +52,15 @@
   height: 0;
 }
 
-/* 📱 Mobile */
+/* ===================== */
+/* 📱 MOBILE OPTIMIZATION */
+/* ===================== */
 @media (max-width: 768px) {
   .console-section {
-    min-height: 220px;
-    font-size: 14px;
+    flex: none;          /* 🚨 stop flex stretching */
+    height: 40vh;        /* ✅ REDUCED HEIGHT */
+    min-height: 0;
+    font-size: 13px;
   }
 
   .console-h3 {
@@ -63,7 +68,16 @@
   }
 
   .clearbtn {
-    font-size: 10px;
+    font-size: 12px;
     padding: 6px 10px;
+  }
+}
+
+/* ===================== */
+/* 📱 LANDSCAPE PHONES */
+/* ===================== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .console-section {
+    height: 22vh;
   }
 }

@@ -1,16 +1,20 @@
+/* ===================== */
 /* Editor wrapper */
+/* ===================== */
 .editor-section {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 0;        /* 🔥 VERY IMPORTANT for flex + Monaco */
+  min-height: 0;        /* 🔥 REQUIRED for Monaco + flex */
   overflow: hidden;
 }
 
+/* ===================== */
 /* Monaco container */
+/* ===================== */
 .editor-container {
   flex: 1;
-  min-height: 0;        /* 🔥 allows Monaco to calculate height */
+  min-height: 0;        /* 🔥 Monaco height calculation */
   width: 100%;
 }
 
@@ -19,13 +23,38 @@
   height: 100% !important;
 }
 
-/* 📱 Mobile */
+/* ===================== */
+/* 📱 MOBILE OPTIMIZATION */
+/* ===================== */
 @media (max-width: 768px) {
   .editor-section {
-    min-height: 50vh;
+    flex: none;          /* 🚨 STOP flex stretching */
+    height: 45vh;        /* ✅ ACTUAL height reduction */
+    min-height: 0;
   }
 
   .editor-container {
-    min-height: 45vh;
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* 🔽 Reduce editor font size on mobile */
+  .editor-container .monaco-editor,
+  .editor-container .monaco-editor .view-lines {
+    font-size: 12px !important;
+  }
+
+  /* Reduce line number gutter width */
+  .editor-container .monaco-editor .margin {
+    width: 36px !important;
+  }
+}
+
+/* ===================== */
+/* 📱 LANDSCAPE PHONES */
+/* ===================== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .editor-section {
+    height: 35vh;
   }
 }
