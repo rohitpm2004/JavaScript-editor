@@ -24,4 +24,4 @@ app.get("/", (req, res) => {
 // Error middleware (LAST)
 app.use(errorHandler);
 
-export default app;      
+export default app;

@@ -2,7 +2,7 @@ import Editor from "@monaco-editor/react";
 import Controls from "./Controlls";
 import "./editor.css";
 
-const CodeEditor = ({ code, setCode, theme, runCode, toggleTheme }) => {
+const CodeEditor = ({ code, setCode, theme, runCode, toggleTheme ,onShare,}) => {
   return (
     <div className="editor-section">
       <Controls
@@ -10,6 +10,8 @@ const CodeEditor = ({ code, setCode, theme, runCode, toggleTheme }) => {
         onToggleTheme={toggleTheme}
         theme={theme}
         code={code}
+        onShare={onShare}
+        // readOnly={readOnly}
       />
 
       <div className="editor-container">

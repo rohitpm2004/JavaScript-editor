@@ -175,7 +175,9 @@ import CodeEditor from "../components/Editor";
 import Console from "../components/Console";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ShareModal from "../components/shareModel";
 import "./home.css";
+import { saveCode } from "../services/api";
 
 const Home = ({ initialCode = null, readOnly = false }) => {
   const [code, setCode] = useState(
@@ -184,6 +186,9 @@ const Home = ({ initialCode = null, readOnly = false }) => {
   const [output, setOutput] = useState([]);
   const [theme, setTheme] = useState("dark");
 
+   // Share modal state
+   const [isShareOpen, setIsShareOpen] = useState(false);
+   const [shareUrl, setShareUrl] = useState("");
   // Sync code for shared links
   useEffect(() => {
     if (initialCode !== null) {
@@ -243,6 +248,18 @@ const Home = ({ initialCode = null, readOnly = false }) => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
+
+
+    const handleShare = async () => {
+    try {
+      const data = await saveCode(code);
+      setShareUrl(data.url);
+      setIsShareOpen(true);
+    } catch {
+      alert("Failed to share code");
+    }
+  };
+
   return (
     <>
       <Navbar theme={theme} />
@@ -256,6 +273,7 @@ const Home = ({ initialCode = null, readOnly = false }) => {
             toggleTheme={toggleTheme}
             runCode={runCode}
             readOnly={readOnly}
+            onShare={handleShare}
           />
         </div>
 
@@ -274,6 +292,12 @@ const Home = ({ initialCode = null, readOnly = false }) => {
           title="sandbox"
         />
       </div>
+      <ShareModal
+        isOpen={isShareOpen}
+        url={shareUrl}
+        onClose={() => setIsShareOpen(false)}
+      />
+     
 
       <Footer theme={theme} />
     </>
