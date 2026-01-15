@@ -175,7 +175,7 @@ import CodeEditor from "../components/Editor";
 import Console from "../components/Console";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ShareModal from "../components/shareModel";
+import ShareModal from "../components/ShareModal";
 import "./home.css";
 import { saveCode } from "../services/api";
 
@@ -189,12 +189,6 @@ const Home = ({ initialCode = null, readOnly = false }) => {
    // Share modal state
    const [isShareOpen, setIsShareOpen] = useState(false);
    const [shareUrl, setShareUrl] = useState("");
-  // Sync code for shared links
-  useEffect(() => {
-    if (initialCode !== null) {
-      setCode(initialCode);
-    }
-  }, [initialCode]);
 
   // Listen for iframe logs
   useEffect(() => {
@@ -238,7 +232,7 @@ const Home = ({ initialCode = null, readOnly = false }) => {
             } catch (err) {
               send("error", err.message);
             }
-          <\/script>
+          </script>
         </body>
       </html>
     `;

@@ -15,7 +15,7 @@ const Navbar = ( {theme} ) => {
        
       <div className="right">
          <h2>Enjoy Coding </h2>
-         <FaSmile style={{color:"white"}} size={28} />
+         {/* <FaSmile style={{color:"white"}} size={28} /> */}
       </div>
     </div>
   ) 

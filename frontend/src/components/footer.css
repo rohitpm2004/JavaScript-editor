@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
-  min-height: 120px;
-  padding: 16px;
+  min-height: 90px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
