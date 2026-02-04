@@ -14,7 +14,7 @@ export const createCode = async (req, res, next) => {
       language
     });
 
-    const shareUrl = `${process.env.FRONTEND_URL}/code/${savedCode._id}`;
+    const shareUrl = `${process.env.FRONTEND_URL}/api/code/${savedCode._id}`;
 
     res.status(201).json({
       id: savedCode._id,
