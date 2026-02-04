@@ -1,4 +1,4 @@
-const BASE_URL = "https://javascript-editor.onrender.com/api/code"
+const BASE_URL = "https://javascript-editor-03.onrender.com/api/code"
 
 
 export const saveCode = async (code)=> {
